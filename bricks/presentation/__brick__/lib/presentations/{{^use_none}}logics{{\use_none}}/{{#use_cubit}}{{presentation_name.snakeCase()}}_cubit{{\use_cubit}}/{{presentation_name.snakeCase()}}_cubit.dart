@@ -10,4 +10,6 @@ part '{{presentation_name.snakeCase()}}_state.dart';
 /// {@endtemplate}
 final class {{presentation_name.pascalCase()}}Cubit extends Cubit<{{presentation_name.pascalCase()}}State> {
   {{presentation_name.pascalCase()}}Cubit() : super(const {{presentation_name.pascalCase()}}State());
+
+  void loading() => emit(state.copyWith(status: LogicStatuses.loading));
 }
