@@ -17,14 +17,14 @@ import '../../logics/{{presentation_name.snakeCase()}}_cubit/{{presentation_name
 {{/use_cubit}}
 
 {{#use_stateful}}
-final class {{presentation_name.pascalCase()}} extends StatefulWidget {
-  const {{presentation_name.pascalCase()}}({super.key});
+final class {{presentation_name.pascalCase()}}Page extends StatefulWidget {
+  const {{presentation_name.pascalCase()}}Page({super.key});
 
   @override
-  State<{{presentation_name.pascalCase()}}> createState() => _{{presentation_name.pascalCase()}}State();
+  State<{{presentation_name.pascalCase()}}Page> createState() => _{{presentation_name.pascalCase()}}PageState();
 }
 
-class _{{presentation_name.pascalCase()}}State extends State<{{presentation_name.pascalCase()}}> {
+class _{{presentation_name.pascalCase()}}PageState extends State<{{presentation_name.pascalCase()}}Page> {
   {{#use_cubit}}
   late {{presentation_name.pascalCase()}}Cubit _cubit;
 
@@ -79,8 +79,8 @@ class _{{presentation_name.pascalCase()}}State extends State<{{presentation_name
 {{/use_stateful}}
 
 {{#use_stateless}}
-final class {{presentation_name.pascalCase()}} extends StatelessWidget { 
-  const {{presentation_name.pascalCase()}}({super.key});
+final class {{presentation_name.pascalCase()}}Page extends StatelessWidget { 
+  const {{presentation_name.pascalCase()}}Page({super.key});
 
   @override
   Widget build(BuildContext context) {
