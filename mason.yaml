@@ -1,0 +1,5 @@
+bricks:
+  presentation: 
+    path: bricks/presentation
+  injectable: 
+    path: bricks/injectable
