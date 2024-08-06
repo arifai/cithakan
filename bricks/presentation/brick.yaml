@@ -1,0 +1,28 @@
+name: presentation
+description: Presentation
+version: 0.1.0
+
+environment:
+  mason: ">=0.1.0-dev.57 <0.1.0"
+
+vars:
+  presentation_name:
+    type: string
+    prompt: What is the name of your presentation?
+
+  widget_type:
+    type: enum
+    prompt: What type of widget do you want to use?
+    default: stateful
+    values:
+      - stateful
+      - stateless
+
+  bloc_type:
+    type: enum
+    prompt: What type of BLoC do you want to use?
+    default: bloc
+    values:
+      - bloc
+      - cubit
+      - none
