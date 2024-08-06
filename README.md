@@ -1,3 +1,7 @@
-# Local Mason
+# Cithakan 🧱
 
-A local Mason is a brick that is not published on pub.dev.
+Cithakan is a template to accelerate the creation of [Flutter] applications by utilizing [Mason].
+
+<!-- Links -->
+[Mason]: https://pub.dev/packages/mason
+[Flutter]: https://flutter.dev
