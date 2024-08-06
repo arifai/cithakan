@@ -14,10 +14,10 @@ part '{{presentation_name.snakeCase()}}_state.dart';
 final class {{presentation_name.pascalCase()}}Bloc extends Bloc<{{presentation_name.pascalCase()}}Event, {{presentation_name.pascalCase()}}State> {
   /// {@macro {{presentation_name.snakeCase()}}_bloc}
   {{presentation_name.pascalCase()}}Bloc() : super(const {{presentation_name.pascalCase()}}State()) {
-    on<Initialize{{presentation_name.pascalCase()}}Event>(_doInitialize);
+    on<Loading{{presentation_name.pascalCase()}}Event>(_doInitialize);
   }
 
-  void _doInitialize(Initialize{{presentation_name.pascalCase()}}Event event, Emitter<{{presentation_name.pascalCase()}}State> emit) async {
+  void _doInitialize(Loading{{presentation_name.pascalCase()}}Event event, Emitter<{{presentation_name.pascalCase()}}State> emit) async {
     emit(state.copyWith(status: LogicStatuses.loading));
   }
 }
