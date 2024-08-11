@@ -62,12 +62,16 @@ class _{{presentation_name.pascalCase()}}PageState extends State<{{presentation_
     return Scaffold(
       appBar: AppBar(title: const Text('{{presentation_name.titleCase()}}')),
       {{#use_bloc}}
-      body: switch (_bloc.state.status) {
-        LogicStatuses.initial => const SizedBox.shrink(),
-        LogicStatuses.loading => const Center(child: CircularProgressIndicator()),
-        LogicStatuses.success => const SizedBox.shrink(),
-        LogicStatuses.error => const SizedBox.shrink(),
-      },
+      body: BlocBuilder<{{presentation_name.pascalCase()}}Bloc, {{presentation_name.pascalCase()}}State>(
+        builder: (_, state) {
+          return  switch (_bloc.state.status) {
+            LogicStatuses.initial => const SizedBox.shrink(),
+            LogicStatuses.loading => const Center(child: CircularProgressIndicator()),
+            LogicStatuses.success => const SizedBox.shrink(),
+            LogicStatuses.error => const SizedBox.shrink(),
+          };
+        },
+      ),
       {{/use_bloc}}
 
       {{#use_none}}
@@ -95,12 +99,16 @@ final class {{presentation_name.pascalCase()}}Page extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('{{presentation_name.titleCase()}}')),
       {{#use_bloc}}
-      body: switch (bloc.state.status) {
-        LogicStatuses.initial => const SizedBox.shrink(),
-        LogicStatuses.loading => const Center(child: CircularProgressIndicator()),
-        LogicStatuses.success => const SizedBox.shrink(),
-        LogicStatuses.error => const SizedBox.shrink(),
-      },
+      body: BlocBuilder<{{presentation_name.pascalCase()}}Bloc, {{presentation_name.pascalCase()}}State>(
+        builder: (_, state) {
+          return  switch (bloc.state.status) {
+            LogicStatuses.initial => const SizedBox.shrink(),
+            LogicStatuses.loading => const Center(child: CircularProgressIndicator()),
+            LogicStatuses.success => const SizedBox.shrink(),
+            LogicStatuses.error => const SizedBox.shrink(),
+          };
+        },
+      ),
       {{/use_bloc}}
 
       {{#use_none}}
