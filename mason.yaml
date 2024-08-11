@@ -3,3 +3,5 @@ bricks:
     path: bricks/presentation
   injectable: 
     path: bricks/injectable
+  model:
+    path: bricks/model
